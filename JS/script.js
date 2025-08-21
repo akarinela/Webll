@@ -1,25 +1,39 @@
-// var = nome;
-// nome = "Ana Karine";
+// Declaração de tipos diferentes:
+var texto = "JavaScript";
+var A = 1;
+var B = "1";
+var C = 3.14;
+var D = "3.14";
 
-// console.log(nome);
-// console.log("Olá " + nome);
-// console.log(`Olá ${nome}`)
+console.log("--- Original:");
+console.log(texto + " tipo " + typeof(texto));
+console.log(A + " tipo " + typeof(A));
+console.log(B + " tipo " + typeof(B));
+console.log(C + " tipo " + typeof(C));
+console.log(D + " tipo " + typeof(D));
 
-// console.log("-----------");
+// Conversão entre tipos:
+let novoA = A.toString();
+let novoB = parseInt(B);
+let novoC = C.toString();
+let novoD = parseFloat(D);
 
-let precolivro = 24.95;
-let desconto = 40/100;
+console.log("--- Convertido:");
+console.log(novoA + " tipo " + typeof(novoA));
+console.log(novoB + " tipo " + typeof(novoB));
+console.log(novoC + " tipo " + typeof(novoC));
+console.log(novoD + " tipo " + typeof(novoD));
 
-let valordesconto = precolivro * desconto;
-let precolivrocomdesconto = precolivro - valordesconto;
+// let novoTexto = parseInt(texto);
+// console.log("--- Convertido/parseado:");
+// console.log(novoText + " tipo " + typeof(novoTexto));
 
-console.log("Desconto = " + valordesconto);
-console.log("Livro com desconto = " + precolivrocomdesconto);
+// Lendo algo do usuário
+var nome = prompt("Digite seu nome: ");
+console.log("Olá " + nome);
+console.log(typeof(nome));
 
-let numerocopias = 60;
-
-let preco60copias = numerocopias + precolivrocomdesconto;
-
-console.log(`Preço para as ${numerocopias} copias = R$${preco60copias}`);
-
-let precotransporte = 3.00 + 0.75*(numero)
+var N = prompt("Digite um número: ")
+var X = parseFloat(N);
+console.log(`Tipo de N: ${typeof(N)}`);
+console.log(`Tipo de X: ${typeof(X)}`);
