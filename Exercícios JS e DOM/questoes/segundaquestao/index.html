@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Troca de Cores</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column; /* empilha verticalmente */
+      gap: 20px;
+      padding: 50px;
+      align-items: center; /* centraliza horizontalmente */
+    }
+
+    .box {
+      width: 200px;
+      height: 150px;
+      transition: background-color 0.3s;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="box1" class="box green"></div>
+    <div id="box2" class="box yellow"></div>
+  </div>
+
+  <script>
+    const box1 = document.getElementById('box1');
+    const box2 = document.getElementById('box2');
+
+    function trocarCores() {
+      box1.classList.toggle('green');
+      box1.classList.toggle('yellow');
+
+      box2.classList.toggle('green');
+      box2.classList.toggle('yellow');
+    }
+
+    box1.addEventListener('mousemove', trocarCores);
+    box2.addEventListener('mousemove', trocarCores);
+  </script>
+
+</body>
+</html>
